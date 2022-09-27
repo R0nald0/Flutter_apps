@@ -76,18 +76,12 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Container(
                     padding: EdgeInsets.symmetric(horizontal: 3, vertical: 2),
-                    child: Row(crossAxisAlignment: CrossAxisAlignment.end,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Expanded(child:  Image.asset("assets/images/forca.png")),
-                        Expanded(child: Observer(
+                        child: Observer(
                           builder: (_) => Text(
                             "${palavraController.traco}",
-                            style: TextStyle(fontSize: 40, letterSpacing: 13),
+                            style: TextStyle(fontSize: 40, letterSpacing: 13,color:Colors.white),
                           ),
-                        ),)
-                      ],
-                    )
+                        ),
                 ),
                 SizedBox(height: 40),
                 Container(

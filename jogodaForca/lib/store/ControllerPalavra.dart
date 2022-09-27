@@ -111,7 +111,7 @@ abstract class ControllerPalavraBase with Store {
    @action
    countTime() {
 
-     timer = Timer.periodic(Duration(milliseconds: 100), (timer) {
+     timer = Timer.periodic(Duration(seconds: 1), (timer) {
        if (tempoSegundo != 0) {
          tempoSegundo--;
          if(tempoSegundo == 0 && tempoMinuto !=0){
@@ -169,7 +169,7 @@ abstract class ControllerPalavraBase with Store {
 
        showDialog( context: context,
            builder:(context)=> AlertDialogComponent(
-             titulo: "Voce PERDEUU !!",
+             titulo: "Suas Chances Acabaram!!",
              msg: "Tentar novamente?",
              onClickPositivo: () {
                Navigator.pushAndRemoveUntil(context,
